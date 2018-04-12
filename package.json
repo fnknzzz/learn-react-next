@@ -1,0 +1,22 @@
+{
+    "name": "react",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "start": "parcel index.html -p 9000",
+        "update": "cnpm i react@latest react-dom@latest --save"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "react": "^16.3.1",
+        "react-dom": "^16.3.1"
+    },
+    "devDependencies": {
+        "babel-plugin-transform-class-properties": "^6.24.1",
+        "babel-preset-env": "^1.6.1",
+        "babel-preset-react": "^6.24.1",
+        "parcel-bundler": "^1.7.0"
+    }
+}
