@@ -34,7 +34,7 @@ article {
     width: 100%;
     height: 100%;
     box-sizing: border-box;
-    background-color: #eee;
+    background-color: #f8f8f8;
     overflow: hidden;
     font-size: 18px;
 }
@@ -77,4 +77,5 @@ a {
     transform: translate(-50%, -50%);
     border: 1px solid #ccc;
     border-radius: 5px;
+    background-color: white;
 }

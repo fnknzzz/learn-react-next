@@ -1,6 +1,6 @@
 {
     "presets": [
-        [
+        "stage-0", [
             "env", {
                 "targets": {
                     "browsersList": "last 2 Chrome versions"

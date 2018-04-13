@@ -2,7 +2,8 @@ import React from 'react'
 import { HashRouter as Router, Route, Link, Switch, Redirect } from 'react-router-dom'
 import ErrorBoundary from './ErrorBoundary'
 import Portal from './Portal'
-
+import Fragment from './Fragment'
+import NewLifecycles from './NewLifcycles'
 
 export default class App extends React.Component {
     state = {
@@ -14,6 +15,12 @@ export default class App extends React.Component {
     }, {
         Component: Portal,
         title: 'Portal'
+    }, {
+        Component: Fragment,
+        title: 'Fragment'
+    }, {
+        Component: NewLifecycles,
+        title: 'NewLifecycles'
     }]
     render() {
         return (
@@ -30,7 +37,11 @@ export default class App extends React.Component {
                         <Switch>
                             { this.lists.map(({Component, title}) => (
                                 <Route path={'/' + title} key={title}>
-                                    <Component />
+                                    <div className='content'>
+                                        <div className="view">
+                                            <Component />
+                                        </div>
+                                    </div>
                                 </Route>
                             )) }
                             <Redirect to={'/' + this.lists[0].title}/>

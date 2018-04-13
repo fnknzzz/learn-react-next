@@ -1,12 +1,19 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
+const portalDOM = document.querySelector('#portal')
+
 export default class Portal extends React.Component {
     state = {
         color: 'red'
     }
+    componentDidMount() {
+        portalDOM.style.display = 'block'
+    }
+    componentWillUnmount() {
+        portalDOM.style.display = 'none'
+    }
     toggleColor = (e) => {
-        e.preventDefault()
         this.setState({
             color: this.state.color === 'red' ? 'blue' : 'red'
         })

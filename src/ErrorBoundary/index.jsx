@@ -13,21 +13,21 @@ export default class ErrorBoundary extends React.Component {
     toggleHandler = () => this.setState({
         showHandler: !this.state.showHandler
     })
+    reset = () => this.setState({
+        count: 0,
+        showHandler: false
+    })
     render() {
         return (
-            <div className='content'>
-                <div className='view'>
-                    <ErrorHandler showHandler={this.state.showHandler}>
-                        <React.Fragment>
-                            <p>点击自增按钮到5后会抛出错误, 可点击按钮切换是否捕获错误</p>
-                            <ErrorProducer count={this.state.count} inc={this.inc}/>
-                            <button onClick={this.toggleHandler}>
-                                当前{!this.state.showHandler && '不'}捕获
-                            </button>
-                        </React.Fragment>
-                    </ErrorHandler>
-                </div>
-            </div>
+            <ErrorHandler showHandler={this.state.showHandler} reset={this.reset}>
+                <React.Fragment>
+                    <p>点击自增按钮到5后会抛出错误, 可点击按钮切换是否捕获错误</p>
+                    <ErrorProducer count={this.state.count} inc={this.inc}/>
+                    <button onClick={this.toggleHandler}>
+                        当前{!this.state.showHandler && '不'}捕获
+                    </button>
+                </React.Fragment>
+            </ErrorHandler>
         )
     }
 }
