@@ -3,7 +3,11 @@ import { HashRouter as Router, Route, Link, Switch, Redirect } from 'react-route
 import ErrorBoundary from './ErrorBoundary'
 import Portal from './Portal'
 import Fragment from './Fragment'
-import NewLifecycles from './NewLifcycles'
+import GetDerivedStateFromProps from './GetDerivedStateFromProps'
+import GetSnapshotBeforeUpdate from './GetSnapshotBeforeUpdate'
+import Context from './Context'
+import Ref from './Ref'
+import ForwardRef from './ForwardRef'
 
 export default class App extends React.Component {
     state = {
@@ -19,8 +23,20 @@ export default class App extends React.Component {
         Component: Fragment,
         title: 'Fragment'
     }, {
-        Component: NewLifecycles,
-        title: 'NewLifecycles'
+        Component: GetDerivedStateFromProps,
+        title: 'getDerivedStateFromProps'
+    }, {
+        Component: GetSnapshotBeforeUpdate,
+        title: 'getSnapshotBeforeUpdate'
+    }, {
+        Component: Context,
+        title: 'Context'
+    }, {
+        Component: Ref,
+        title: 'Ref'
+    }, {
+        Component: ForwardRef,
+        title: 'ForwardRef'
     }]
     render() {
         return (

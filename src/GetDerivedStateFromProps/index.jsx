@@ -1,8 +1,7 @@
 import React from 'react'
 import Consumer from './Consumer'
 
-
-export default class NewLifcycles extends React.Component {
+export default class GetDerivedStateFromProps extends React.Component {
     state = {
         count: 0,
         erased: false
