@@ -2,7 +2,7 @@ import React from 'react'
 import { HashRouter as Router, Route, Link, Switch, Redirect } from 'react-router-dom'
 import ErrorBoundary from './ErrorBoundary'
 import Portal from './Portal'
-import Fragment from './Fragment'
+import NewComponent from './NewComponent'
 import GetDerivedStateFromProps from './GetDerivedStateFromProps'
 import GetSnapshotBeforeUpdate from './GetSnapshotBeforeUpdate'
 import Context from './Context'
@@ -20,8 +20,8 @@ export default class App extends React.Component {
         Component: Portal,
         title: 'Portal'
     }, {
-        Component: Fragment,
-        title: 'Fragment'
+        Component: NewComponent,
+        title: 'NewComponent'
     }, {
         Component: GetDerivedStateFromProps,
         title: 'getDerivedStateFromProps'
