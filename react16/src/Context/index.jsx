@@ -1,4 +1,5 @@
 import React from 'react'
+import ReduxApp from './ReduxApp'
 
 const Color = React.createContext('red')
 
@@ -11,9 +12,13 @@ export default class Context extends React.Component {
     })
     render() {
         return (
-            <Color.Provider value={this.state.color}>
-                <Text onClick={this.toggleColor}></Text>
-            </Color.Provider>
+            <React.Fragment>
+                <Color.Provider value={this.state.color}>
+                    <Text onClick={this.toggleColor}></Text>
+                </Color.Provider>
+                <hr/>
+                <ReduxApp></ReduxApp>
+            </React.Fragment>
         )
     }
 }

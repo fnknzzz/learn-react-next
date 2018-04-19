@@ -18,7 +18,6 @@ export default class ErrorBoundary extends React.Component {
         showHandler: false
     })
     render() {
-        console.log(1)
         return (
             <ErrorHandler showHandler={this.state.showHandler} reset={this.reset}>
                 <React.Fragment>
