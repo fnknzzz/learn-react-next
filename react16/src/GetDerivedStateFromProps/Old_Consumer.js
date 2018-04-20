@@ -11,7 +11,7 @@ export default class Consumer extends React.Component {
             })
         }
     }
-    handleChange = e => {
+    handleChange = (e) => {
         this.props.eraseResult()
         this.setState({
             result: e.target.value
@@ -19,9 +19,9 @@ export default class Consumer extends React.Component {
     }
     render() {
         return (
-            <input type="text"
-                onChange={this.handleChange}
-                value={this.state.result} />
+            <input type='text'
+                onChange={ this.handleChange }
+                value={ this.state.result } />
         )
     }
 }

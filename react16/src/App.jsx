@@ -1,5 +1,5 @@
 import React from 'react'
-import { HashRouter as Router, Route, Link, Switch, Redirect } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Link, Switch, Redirect } from 'react-router-dom'
 import ErrorBoundary from './ErrorBoundary'
 import Portal from './Portal'
 import NewComponent from './NewComponent'

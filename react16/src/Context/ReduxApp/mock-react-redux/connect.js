@@ -1,14 +1,12 @@
 import React from 'react'
 import StoreContext from './StoreContext'
 
-const connect = (mapStateToProps = state => state, mapDispatchToProps = () => {}) => Component => {
+const connect = (mapStateToProps = state => state, mapDispatchToProps = () => {}) => (Component) => {
     class Connected extends React.Component {
         static displayName = `Connected(${Component.displayName || Component.name || 'Unknown'})`
-        renderComponent = ({ state, dispatch }) => {
-            return <Component {...mapStateToProps(state)}
-                {...mapDispatchToProps(dispatch)}
-                {...this.props}/>
-        }
+        renderComponent = ({ state, dispatch }) => (<Component { ...mapStateToProps(state) }
+            { ...mapDispatchToProps(dispatch) }
+            { ...this.props } />)
         render() {
             return (
                 <StoreContext.Consumer>
@@ -16,7 +14,6 @@ const connect = (mapStateToProps = state => state, mapDispatchToProps = () => {}
                 </StoreContext.Consumer>
             )
         }
-        
     }
     return Connected
 }

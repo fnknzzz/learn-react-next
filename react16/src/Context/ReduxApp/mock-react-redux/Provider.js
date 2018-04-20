@@ -14,8 +14,7 @@ export default class Provider extends React.Component {
     render() {
         const { store } = this.props
         return (
-            <StoreContext.Provider
-                value={{ state: store.getState(), dispatch: store.dispatch.bind(store) }}>
+            <StoreContext.Provider value={{ state: store.getState(), dispatch: store.dispatch }}>
                 { React.Children.only(this.props.children) }
             </StoreContext.Provider>
         )

@@ -29,7 +29,7 @@
 ### Lifecycle Changes
 
 即将移除三个生命周期函数: `componentWillMount`, `componentWillUpdate`, `componentWillReceiveProps`。
-取而代之的是新的两个声明周期函数: `static getDerivedStateFromProps`, `getSnapShotBeforeUpdate`。
+取而代之的是新的两个生命周期函数: `static getDerivedStateFromProps`, `getSnapShotBeforeUpdate`。
 
 ### Ref
 
@@ -37,4 +37,4 @@
 
 ### StrictMode
 
-新的 React 静态组件，类似于 `Fragment`不会渲染成真正的 DOM。加入了提示功能，生产环境下会提醒即将废弃的 API。
+新的 React 静态组件，类似于 `Fragment`，不会渲染成真正的 DOM，并加入了提示功能，生产环境下会提醒即将废弃的 API。

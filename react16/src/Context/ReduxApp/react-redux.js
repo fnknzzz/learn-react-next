@@ -2,4 +2,3 @@
 import { connect, Provider } from './mock-react-redux'
 
 export { connect, Provider }
-
