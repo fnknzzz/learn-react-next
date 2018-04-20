@@ -19,12 +19,17 @@ export default class Portal extends React.Component {
         })
     }
     render() {
-        return <Content color={this.state.color} onClick={this.toggleColor}/>
+        return (
+            <React.Fragment>
+                <p style={{ color: this.state.color }}>这里的颜色</p>
+                <Content color={this.state.color} onClick={this.toggleColor}/>
+            </React.Fragment>
+        )
     }
 }
 
 const Content = props => ReactDOM.createPortal((
-    <div style={{ color: props.color }} onClick={props.onClick}>
-        这是portal里面的内容
+    <div style={{ color: props.color }} onClick={ props.onClick }>
+        这是portal里面的内容,点我换色
     </div>
 ), document.querySelector('#portal'))

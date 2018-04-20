@@ -21,7 +21,8 @@ export default class ErrorBoundary extends React.Component {
         return (
             <ErrorHandler showHandler={this.state.showHandler} reset={this.reset}>
                 <React.Fragment>
-                    <p>点击自增按钮到5后会抛出错误, 可点击按钮切换是否捕获错误</p>
+                    <p>点击自增按钮到5后会抛出错误</p>
+                    <p>可点击下面的按钮切换是否捕获错误模式</p>
                     <ErrorProducer count={this.state.count} inc={this.inc}/>
                     <button onClick={this.toggleHandler}>
                         当前{!this.state.showHandler && '不'}捕获
