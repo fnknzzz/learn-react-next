@@ -2,15 +2,16 @@ import React from 'react'
 
 export default class Consumer extends React.Component {
     state = {
-        result: this.props.value * this.props.value
+        result: this.getResult(nextProps.value)
     }
     componentWillReceiveProps(nextProps) {
         if (nextProps.value !== this.props.value) {
             this.setState({
-                result: nextProps.value * nextProps.value
+                result: this.getResult(nextProps.value)
             })
         }
     }
+    getResult = value => value * value
     handleChange = (e) => {
         this.props.eraseResult()
         this.setState({
