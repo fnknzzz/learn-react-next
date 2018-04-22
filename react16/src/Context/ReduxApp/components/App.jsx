@@ -1,7 +1,8 @@
 import React from 'react'
 import connect from '../redux/connect'
 
-class App extends React.Component {
+@connect
+export default class App extends React.Component {
     setColor = color => () => this.props.setColor(color)
     render() {
         return (
@@ -18,5 +19,3 @@ class App extends React.Component {
         )
     }
 }
-
-export default connect(App)
