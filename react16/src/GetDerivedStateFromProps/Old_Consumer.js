@@ -2,7 +2,7 @@ import React from 'react'
 
 export default class Consumer extends React.Component {
     state = {
-        result: this.getResult(nextProps.value)
+        result: this.getResult(this.props.value)
     }
     componentWillReceiveProps(nextProps) {
         if (nextProps.value !== this.props.value) {
